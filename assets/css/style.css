@@ -1,3 +1,4 @@
+/* ✅ Basic Styling (Same as before) */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -10,11 +11,13 @@ body {
     height: 100vh;
 }
 
+/* ✅ Sidebar (Desktop View) */
 .sidebar {
     width: 250px;
     background: #fff;
     padding: 20px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
 }
 
 .sidebar h2 {
@@ -39,6 +42,7 @@ body {
     color: white;
 }
 
+/* ✅ Main Content */
 .content {
     flex-grow: 1;
     padding: 20px;
@@ -57,6 +61,7 @@ body {
     border: 1px solid #ddd;
 }
 
+/* ✅ Exam Cards Grid (Desktop) */
 .exam-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -77,4 +82,61 @@ body {
 .card:hover {
     background: #d9534f;
     color: white;
+}
+
+/* ✅ Responsive Design (Mobile-Friendly) */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    /* 📌 Sidebar Hidden by Default */
+    .sidebar {
+        position: fixed;
+        left: -260px;
+        top: 0;
+        width: 250px;
+        height: 100vh;
+        background: white;
+        transition: left 0.3s ease-in-out;
+        z-index: 1000;
+    }
+
+    /* 📌 Sidebar Visible When Active */
+    .sidebar.active {
+        position: fixed;
+        left: -100%;  /* ✅ Completely Hide */
+        top: 0;
+        width: 250px;
+        height: 100vh;
+        background: white;
+        transition: left 0.3s ease-in-out;
+        z-index: 1000;
+    }
+
+        /* 📌 Sidebar Open */
+        .sidebar.active {
+            left: 0;
+    }
+    /* 📌 Toggle Button */
+    .menu-toggle {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        font-size: 24px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 1100;
+    }
+
+    /* 📌 Exam Cards: Single Column */
+    .exam-cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /* 📌 Search Bar Full Width */
+    .header input {
+        width: 100%;
+    }
 }

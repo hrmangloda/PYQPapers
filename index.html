@@ -8,33 +8,31 @@
 </head>
 <body>
     <div class="container">
-        <aside class="sidebar">
+        <!-- 📌 Sidebar (Hidden in Mobile) -->
+        <aside class="sidebar" id="sidebar">
             <h2>📚 EXAMS</h2>
-            <ul>
-                <li>🏦 Bank</li>
-                <li class="active">📋 SSC</li>
-                <li>🚆 Railway</li>
-                <li>🗺️ State</li>
-                <li>📑 Other</li>
-                <li>🎓 Teaching</li>
-                <li>🛡️ Defence</li>
+            <ul id="menu">
+                <li data-category="bank">🏦 Bank</li>
+                <li data-category="ssc" class="active">📋 SSC</li>
+                <li data-category="railway">🚆 Railway</li>
+                <li data-category="state">🗺️ State</li>
+                <li data-category="other">📑 Other</li>
+                <li data-category="teaching">🎓 Teaching</li>
+                <li data-category="defence">🛡️ Defence</li>
             </ul>
         </aside>
+
+        <!-- 📌 Toggle Button for Sidebar -->
+        <button class="menu-toggle" id="menuToggle">☰</button>
         
+        <!-- 📌 Main Content -->
         <main class="content">
             <div class="header">
                 <h1>Free Mock Test</h1>
                 <input type="text" placeholder="Search Here">
             </div>
-            <div class="exam-cards">
-                <div class="card">🛡️ SSC MTS</div>
-                <div class="card">📜 SSC CHSL</div>
-                <div class="card">🎯 SSC GD</div>
-                <div class="card">⚖️ SSC JE</div>
-                <div class="card">🚓 SSC CPO</div>
-                <div class="card">📘 SSC CGL</div>
-                <div class="card">🔍 IB ACIO</div>
-                <div class="card">📝 Selection Post</div>
+            <div class="exam-cards" id="examList">
+                <!-- Exams will be added dynamically -->
             </div>
         </main>
     </div>
