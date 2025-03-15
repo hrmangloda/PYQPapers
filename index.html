@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Free Mock Test</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
     <div class="container">
         <!-- 📌 Sidebar (Hidden in Mobile) -->
         <aside class="sidebar" id="sidebar">
             <h2>📚 EXAMS</h2>
             <ul id="menu">
-                <li data-category="bank">🏦 Bank</li>
                 <li data-category="ssc" class="active">📋 SSC</li>
+                <li data-category="bank">🏦 Bank</li>
                 <li data-category="railway">🚆 Railway</li>
                 <li data-category="state">🗺️ State</li>
                 <li data-category="other">📑 Other</li>
@@ -24,12 +26,11 @@
 
         <!-- 📌 Toggle Button for Sidebar -->
         <button class="menu-toggle" id="menuToggle">☰</button>
-        
+
         <!-- 📌 Main Content -->
         <main class="content">
             <div class="header">
-                <h1>Free Mock Test</h1>
-                <input type="text" placeholder="Search Here">
+                <h1>PYQ Papers</h1>
             </div>
             <div class="exam-cards" id="examList">
                 <!-- Exams will be added dynamically -->
@@ -37,6 +38,8 @@
         </main>
     </div>
 
+
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>
